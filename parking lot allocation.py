@@ -129,7 +129,7 @@ def greedy_recommendation(spot_kosong, waktu_sekarang): #fungsi rekomendasi gree
     greedy_memori = Label(window, text=f'{peak / 10**6:.6f} MB', font=('Helvetica',11,'bold'), bg = '#FACEE1', fg = 'black', width = 10, border=0)
     greedy_memori.place(x = 970, y = 364)
     
-def update_button_colors(waktu, kendaraan): #fungsi untuk mengatur warna button berdasarkan rekomendasi dan statur parkir kendaraan
+def update_button_colors(waktu, kendaraan): #fungsi untuk mengatur warna button berdasarkan rekomendasi dan status parkir kendaraan
     spot_terisi(df, waktu, kendaraan)
     if len(spot_kosong)>0:
         heuristic_recommendation(spot_kosong, waktu_sekarang)
